@@ -4,27 +4,35 @@ some nodes preceede others - the prior are dependencies of the dependant nodes.
 This example program doesn't allow multiple dependencies (could be added with minimal effort),
 just fulfills this specification:
 
-Input Output
+Input Dependency
+```
 x => x
+```
 
-Input Output
+Input Dependency
+```
 x =>
 y =>
 z =>
+```
+
 order doesn't matter
 
-Input Output
+Input Dependency
+```
 x =>
 y => z
 z =>
-
+```
 'z' should preceede 'y'
 
-Input Output
+Input Dependency
+```
 u =>
 v => w
 w => z
 x => u
 y => v
 z =>
+```
 'w' should preceede 'v', 'z' should preceede 'w', and so on...
