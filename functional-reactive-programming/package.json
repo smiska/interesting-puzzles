@@ -1,0 +1,15 @@
+{
+  "name": "functional-reactive-programming",
+  "version": "1.0.0",
+  "description": "",
+  "main": "frp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Mihaly Saroy <saroy.mihaly@gmail.com> (https://github.com/smiska)",
+  "license": "MIT",
+  "dependencies": {
+    "faker": "^4.1.0"
+  }
+}
