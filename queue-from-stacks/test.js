@@ -38,7 +38,9 @@ test('peek returns, but does not remove, the first value', () => {
   expect(q.peek()).toEqual(1);
   q.remove()
   expect(q.peek()).toEqual(2);
+  q.add(4)
+  q.add(6)
   expect(q.remove()).toEqual(2);
   expect(q.remove()).toEqual(3);
-  expect(q.peek()).toEqual(undefined);
+  expect(q.peek()).toEqual(4);
 });

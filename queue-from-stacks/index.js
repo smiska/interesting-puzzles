@@ -24,20 +24,36 @@ class Queue {
     this.stackA.push(record)
   }
 
-  remove() {
+  fillBHelper() {
     while (this.stackA.peek()) {
       this.stackB.push(this.stackA.pop())
     }
+  }
 
-    return this.stackB.pop()
+  fillAHelper() {
+    while (this.stackB.peek()) {
+      this.stackA.push(this.stackB.pop())
+    }
+  }
+
+  remove() {
+    let removedItem
+
+    this.fillBHelper()
+    removedItem = this.stackB.pop()
+    this.fillAHelper()
+
+    return removedItem
   }
 
   peek() {
-    while (this.stackA.peek()) {
-      this.stackB.push(this.stackA.pop())
-    }
+    let peekedItem
 
-    return this.stackB.peek()
+    this.fillBHelper()
+    peekedItem = this.stackB.peek()
+    this.fillAHelper()
+
+    return peekedItem
   }
 }
 
