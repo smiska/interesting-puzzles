@@ -10,7 +10,7 @@
   "author": "Mihaly Saroy <saroy.mihaly@gmail.com> (https://github.com/smiska)",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "rxjs": "^6.5.3"
   }
 }
